@@ -5,13 +5,10 @@ import java.io.IOException;
 import java.net.URL;
 
 public class Images {
+    // Поиск фотографии по src и сохранение в папку resourses
     public Images() throws IOException {
-        RenderedImage image = null;
-        image = ImageIO.read(new URL("https://im0-tub-ru.yandex.net/i?id=8800fa2928e6a8f4bd2f36f3bea18e34-l&n=13"));
-        System.out.println("///");
+        RenderedImage image = ImageIO.read(new URL("https://im0-tub-ru.yandex.net/i?id=8800fa2928e6a8f4bd2f36f3bea18e34-l&n=13"));
         File outPutImageFile = new File("D:\\java\\MUIVProject\\src\\main\\resources\\Picture2.jpg");
-        System.out.println("///");
         ImageIO.write(image, "JPG", outPutImageFile);
-        System.out.println("finish");
     }
 }
