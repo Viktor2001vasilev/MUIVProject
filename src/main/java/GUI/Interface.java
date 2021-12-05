@@ -1,14 +1,10 @@
 package GUI;
 
 import Actions.ButtonActions;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 
 // отрисовка интерфейса программы, ожидание действий с кнопками
@@ -21,7 +17,7 @@ public class Interface {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                ButtonActions.button1Action(textArea.getText(), Interface.this);
+                ButtonActions.button1Action(textArea.getText());
             }
             catch (IOException ioException) {
                 ioException.printStackTrace();

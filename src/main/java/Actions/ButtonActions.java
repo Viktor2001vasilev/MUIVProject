@@ -1,18 +1,12 @@
 package Actions;
 
-import GUI.Interface;
-import com.sun.jna.Library;
-import com.sun.jna.Native;
-import com.sun.jna.win32.W32APIOptions;
-
 import javax.swing.*;
 import java.io.*;
-import java.net.MalformedURLException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
+
 
 // выполнение действий
 public class ButtonActions {
@@ -29,7 +23,7 @@ public class ButtonActions {
     private static ArrayList<String> tagsList = new ArrayList<>();
 
     // После нажатия на кнопку "Добавить" происходит запись тегов в файл tags.txt
-    public static void button1Action(String tags, Interface intr) throws IOException {
+    public static void button1Action(String tags) throws IOException {
         System.out.println("Выполнение действия кнопки 1");
         System.out.println(tags);
         FileWriter fileWriter = new FileWriter("src\\main\\resources\\tags.txt", false); // второй параметр- файл будет перезаписываться
